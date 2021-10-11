@@ -18,3 +18,4 @@ Route::get('/', function () {
 });
 
 Route::get('json', [App\Http\Controllers\HomeController::class, 'json']);
+Route::get('primos', [App\Http\Controllers\HomeController::class, 'primos']);
