@@ -44,23 +44,20 @@ class HomeController extends Controller
 
     public function primos(){
 
-        $i=0;
-        $arrayNumbers = array();
-        $arrayPrimos = array();
-
-        while($i<100){
-            array_push($arrayNumbers,$i);
-            $i++;
+        $primos = array();
+        $index=0;
+        while($index<101){
+            for($count=2; $count<$index; $count++){
+                if(($index % $count) == 0 && !array_search($index,$primos)){
+                    array_push($primos, $index);
+                }
+            }
+            $index++;
         }
 
-        foreach($arrayNumbers as $an){
-            array_push($jsonPrimos,HomeController::selecionaPrimos($an));
-        }
+        $jsonPrimos = json_encode($primos);
 
-        $jsonCompleto = json_encode($arrayNumbers);
-        $jsonPrimos = json_encode($arrayPrimos);
-
-        return view('primos' ,['json'=>$jsonCompleto, 'primos'=>$jsonPrimos]);
+        return view('primos' ,['primos'=>$jsonPrimos]);
     }
 
 }

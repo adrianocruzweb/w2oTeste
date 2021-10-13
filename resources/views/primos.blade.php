@@ -38,13 +38,12 @@
 
             <div class="max-w-6xl mx-auto sm:px-6 lg:px-8">
                 <div class="flex justify-center pt-8 sm:justify-start sm:pt-0">
-                    <h2 class="mx-auto d-block text-center text-gray-900 dark:text-white">JSON</h2>
+                    <h2 class="mx-auto d-block text-center text-gray-900 dark:text-white">Primos(JSON)</h2>
                 </div>
 
                 <div class="mt-8 bg-white dark:bg-gray-800 overflow-hidden shadow sm:rounded-lg">
-                    <h4 class="mx-auto d-block text-center text-gray-900 dark:text-white">Numero Primos</h4>
+                    <h4 class="mx-auto d-block text-center text-gray-900 dark:text-white">Numeros Primos de sequencia de 0 a 100</h4>
                     <p class="text-gray-900 dark:text-white" style="word-break: break-word;">{{$primos}}</p>
-                    <!-- <input type="hidden" name="json" id="json" value={{$json}}> -->
                 </div>
                 <!-- <div class="mt-8 bg-white dark:bg-gray-800 overflow-hidden shadow sm:rounded-lg">
                     <div class="row">
